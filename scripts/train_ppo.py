@@ -11,9 +11,9 @@ def main():
 
     config = WarehouseConfig(
         grid_size=10,
-        num_packages=3,
-        obstacle_count=8,
-        max_steps=300,
+        num_packages=2,
+        obstacle_count=3,
+        max_steps=150,
     )
 
     env = WarehouseEnv(
