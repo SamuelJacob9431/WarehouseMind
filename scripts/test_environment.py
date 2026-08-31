@@ -1,4 +1,4 @@
-from aislemind.environment import (
+from warehousemind.environment import (
     WarehouseConfig,
     WarehouseEnv,
 )
