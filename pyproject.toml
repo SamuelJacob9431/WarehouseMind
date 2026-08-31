@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aislemind"
+version = "0.1.0"
+description = "A custom warehouse reinforcement learning environment"
+requires-python = ">=3.10"
+
+dependencies = [
+    "gymnasium>=1.0.0",
+    "numpy>=1.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
