@@ -53,7 +53,7 @@ def main():
     )
 
     model.learn(
-        total_timesteps=100_000
+        total_timesteps=50_000
     )
 
     model.save(
