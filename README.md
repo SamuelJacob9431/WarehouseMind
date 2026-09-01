@@ -1,8 +1,3 @@
-Absolutely. Given what you've built so far, I'd make the README present **WarehouseMind as an RL environment + PPO demonstration**, while leaving room for the later DQN/LLM-agent/OpenEnv expansion.
-
-You can put this directly into `README.md`:
-
-````markdown
 # WarehouseMind
 
 A custom reinforcement learning warehouse environment where an autonomous robot learns to collect packages and deliver them to a designated delivery zone.
@@ -52,7 +47,7 @@ A **Pygame visualization** provides a real-time view of the warehouse and expose
 
 ## Architecture
 
-```text
+
 WarehouseMind
 │
 ├── Custom Environment
@@ -73,13 +68,9 @@ WarehouseMind
         ├── Packages 📦
         ├── Delivery Zone
         └── PPO Action Probabilities
-````
-
----
 
 # Project Structure
 
-```text
 WarehouseMind/
 │
 ├── src/
@@ -107,7 +98,6 @@ WarehouseMind/
 ├── pyproject.toml
 ├── .gitignore
 └── README.md
-```
 
 ---
 
@@ -181,7 +171,7 @@ PPO learns a policy that maps warehouse observations to probabilities over the f
 
 Conceptually:
 
-```text
+
 Warehouse State
        │
        ▼
@@ -194,13 +184,12 @@ Warehouse State
                     │
                     ▼
                 Selected Action
-```
 
 The Pygame interface exposes these probabilities in real time.
 
 Example:
 
-```text
+
 ACTION PROBABILITIES
 
 UP       2.1%
@@ -211,7 +200,7 @@ RIGHT   77.3%
 PPO DECISION
 
 Selected: RIGHT
-```
+
 
 This makes it possible to observe not only **what the agent does**, but also how strongly its policy prefers each action.
 
@@ -238,7 +227,7 @@ Python 3.13 is currently being used for development.
 Clone the repository:
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/SamuelJacob9431/WarehouseMind
 cd WarehouseMind
 ```
 
