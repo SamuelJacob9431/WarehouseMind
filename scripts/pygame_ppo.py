@@ -142,66 +142,22 @@ def rounded_rect(
         )
 
 
-# ============================================================
+
 # ICONS
-# ============================================================
 
-def draw_robot_icon(
-    screen,
-    center,
-    size,
-):
-    """
-    Draw a simple PN warehouse robot icon.
-    """
 
-    x, y = center
-
-    rect_size = int(size * 0.82)
-
-    rect = pygame.Rect(
-        x - rect_size // 2,
-        y - rect_size // 2,
-        rect_size,
-        rect_size,
-    )
-
-    rounded_rect(
-        screen,
-        BLUE,
-        rect,
-        radius=max(6, size // 7),
-    )
-
-    # Slight inner highlight
-    inner = rect.inflate(
-        -max(4, size // 10),
-        -max(4, size // 10),
-    )
-
-    pygame.draw.rect(
-        screen,
-        BLUE_LIGHT,
-        inner,
-        width=2,
-        border_radius=max(4, size // 8),
-    )
-
-    font_size = max(
-        12,
-        int(size * 0.34),
-    )
+def draw_robot_icon(screen, center, size):
+    """Draw the warehouse robot as a robot emoji."""
 
     font = pygame.font.SysFont(
-        "Arial",
-        font_size,
-        bold=True,
+        "Segoe UI Emoji",
+        max(24, int(size * 0.70)),
     )
 
     draw_centered_text(
         screen,
-        "PN",
-        (x, y),
+        "🤖",
+        center,
         font,
         (255, 255, 255),
     )
